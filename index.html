@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>gesture_meme // live detector</title>
 <link rel="stylesheet" href="style.css" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta name="theme-color" content="#11151b" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="gmeme" />
+<meta name="mobile-web-app-capable" content="yes" />
 </head>
 <body>
 
@@ -94,6 +102,14 @@
         <button class="modal-close" id="closeLibrary">×</button>
       </div>
       <div class="modal-body">
+        <div class="lib-toolbar">
+          <button id="btnExport" class="btn btn--outline btn--sm">⇩ экспорт</button>
+          <label class="btn btn--outline btn--sm file-btn">
+            ⇧ импорт
+            <input type="file" id="importInput" accept="application/json" class="hidden" />
+          </label>
+          <button id="btnRestoreDefaults" class="btn btn--outline btn--sm">↺ вернуть стартовые</button>
+        </div>
         <div class="grid" id="libraryGrid"></div>
         <p class="hint" id="libraryEmptyHint">Мемов пока нет — добавь первый с главного экрана.</p>
       </div>
