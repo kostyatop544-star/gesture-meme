@@ -468,21 +468,102 @@ function updateLibCount() {
 }
 
 /* ------------------------------------------------------------------ */
+/* Экспорт / импорт / восстановление стартового набора                 */
+/* ------------------------------------------------------------------ */
+
+const btnExport = document.getElementById("btnExport");
+const btnRestoreDefaults = document.getElementById("btnRestoreDefaults");
+const importInput = document.getElementById("importInput");
+
+btnExport.addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify(Library.entries, null, 2)], {
+    type: "application/json",
+  });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `gesture-meme-library-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+importInput.addEventListener("change", async () => {
+  const file = importInput.files?.[0];
+  if (!file) return;
+  try {
+    const text = await file.text();
+    const imported = JSON.parse(text);
+    if (!Array.isArray(imported)) throw new Error("не список записей");
+
+    const existingIds = new Set(Library.entries.map((e) => e.id));
+    let added = 0;
+    for (const entry of imported) {
+      if (!entry.id || existingIds.has(entry.id)) continue;
+      if (!entry.name || !entry.imageDataUrl || !entry.referenceVector) continue;
+      Library.entries.push(entry);
+      existingIds.add(entry.id);
+      added++;
+    }
+    Library.save();
+    renderLibraryGrid();
+    updateLibCount();
+    alert(`Импортировано мемов: ${added}`);
+  } catch (err) {
+    alert("Не получилось прочитать файл: " + err.message);
+  } finally {
+    importInput.value = "";
+  }
+});
+
+btnRestoreDefaults.addEventListener("click", () => {
+  localStorage.removeItem(DISMISSED_SEEDS_KEY);
+  const existingIds = new Set(Library.entries.map((e) => e.id));
+  let restored = 0;
+  for (const seed of SEED_MEMES) {
+    if (!existingIds.has(seed.id)) {
+      Library.entries.push({ ...seed });
+      existingIds.add(seed.id);
+      restored++;
+    }
+  }
+  Library.save();
+  renderLibraryGrid();
+  updateLibCount();
+  alert(restored > 0 ? `Восстановлено реакций: ${restored}` : "Все стартовые реакции уже на месте");
+});
+
+/* ------------------------------------------------------------------ */
 /* Запуск                                                               */
 /* ------------------------------------------------------------------ */
 
 async function main() {
   updateLibCount();
+
+  if (!window.isSecureContext) {
+    statusEl.textContent = "⚠ нужен https";
+    return;
+  }
+  if (!navigator.mediaDevices?.getUserMedia) {
+    statusEl.textContent = "⚠ браузер не поддерживает камеру";
+    return;
+  }
+
   try {
     statusEl.textContent = "загрузка моделей...";
     await initDetectors();
-    statusEl.textContent = "запрос камеры...";
+    statusEl.textContent = "запрос доступа к камере...";
     await initCamera();
     statusEl.textContent = "● live";
     detectLoop();
   } catch (err) {
     console.error(err);
-    statusEl.textContent = "ошибка: " + err.message;
+    if (err.name === "NotAllowedError") {
+      statusEl.textContent = "⚠ нет доступа к камере";
+    } else if (err.name === "NotFoundError") {
+      statusEl.textContent = "⚠ камера не найдена";
+    } else {
+      statusEl.textContent = "⚠ ошибка: " + err.message;
+    }
   }
 }
 
