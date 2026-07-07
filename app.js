@@ -3,6 +3,7 @@ import {
   HandLandmarker,
   FilesetResolver,
 } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs";
+import { SEED_MEMES } from "./seed_memes.js";
 
 /* ------------------------------------------------------------------ */
 /* Хранилище библиотеки мемов (localStorage: JSON с base64-картинками) */
@@ -46,6 +47,16 @@ const Library = {
 };
 
 Library.load();
+
+// Первый запуск: подсаживаем стартовый набор реакций, если библиотека пуста
+// и пользователь ещё ни разу не взаимодействовал с ней (флаг, чтобы не
+// подсовывать снова после того, как всё удалили осознанно).
+const SEEDED_FLAG = "gesture_meme_seeded_v1";
+if (Library.entries.length === 0 && !localStorage.getItem(SEEDED_FLAG)) {
+  Library.entries = SEED_MEMES.map((m) => ({ ...m }));
+  Library.save();
+  localStorage.setItem(SEEDED_FLAG, "1");
+}
 
 /* ------------------------------------------------------------------ */
 /* Вектор признаков позы: та же идея, что в нативной версии,          */
