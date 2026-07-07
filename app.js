@@ -43,20 +43,39 @@ const Library = {
   remove(id) {
     this.entries = this.entries.filter((e) => e.id !== id);
     this.save();
+    if (id.startsWith("seed-")) {
+      const dismissed = getDismissedSeeds();
+      if (!dismissed.includes(id)) {
+        dismissed.push(id);
+        localStorage.setItem(DISMISSED_SEEDS_KEY, JSON.stringify(dismissed));
+      }
+    }
   },
 };
 
 Library.load();
 
-// Первый запуск: подсаживаем стартовый набор реакций, если библиотека пуста
-// и пользователь ещё ни разу не взаимодействовал с ней (флаг, чтобы не
-// подсовывать снова после того, как всё удалили осознанно).
-const SEEDED_FLAG = "gesture_meme_seeded_v1";
-if (Library.entries.length === 0 && !localStorage.getItem(SEEDED_FLAG)) {
-  Library.entries = SEED_MEMES.map((m) => ({ ...m }));
-  Library.save();
-  localStorage.setItem(SEEDED_FLAG, "1");
+// Мерджим стартовый набор по id: новые записи из SEED_MEMES (например,
+// добавленные позже) подтягиваются даже тем, кто уже открывал приложение
+// раньше, но то, что пользователь осознанно удалил — не воскрешаем.
+const DISMISSED_SEEDS_KEY = "gesture_meme_dismissed_seeds_v1";
+function getDismissedSeeds() {
+  try {
+    return JSON.parse(localStorage.getItem(DISMISSED_SEEDS_KEY) || "[]");
+  } catch {
+    return [];
+  }
 }
+const dismissed = new Set(getDismissedSeeds());
+const existingIds = new Set(Library.entries.map((e) => e.id));
+let addedAny = false;
+for (const seed of SEED_MEMES) {
+  if (!existingIds.has(seed.id) && !dismissed.has(seed.id)) {
+    Library.entries.push({ ...seed });
+    addedAny = true;
+  }
+}
+if (addedAny) Library.save();
 
 /* ------------------------------------------------------------------ */
 /* Вектор признаков позы: та же идея, что в нативной версии,          */
