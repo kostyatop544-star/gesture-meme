@@ -199,4 +199,25 @@ export const SEED_MEMES = [
     },
     "threshold": 0.4
   }
+,
+  {
+    "id": "seed-six_seven",
+    "name": "67",
+    "imageDataUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMTExNTFiIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTI4IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iODgiCiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMzlmZjg4Ij42NzwvdGV4dD4KPHBhdGggZD0iTTQwIDYwIEw0MCA0MCBNMzIgNDggTDQ4IDQ4IiBzdHJva2U9IiNmZjNkODEiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxwYXRoIGQ9Ik0xNjAgMTQwIEwxNjAgMTYwIE0xNTIgMTUyIEwxNjggMTUyIiBzdHJva2U9IiNmZjNkODEiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSIyMCIgeTE9IjE3MCIgeDI9IjE4MCIgeTI9IjE3MCIgc3Ryb2tlPSIjMmEzMTNjIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSI0NSIgY3k9IjE3MCIgcj0iNiIgZmlsbD0iIzhiOTQ5ZSIvPgo8Y2lyY2xlIGN4PSIxNTUiIGN5PSIxNzAiIHI9IjYiIGZpbGw9IiM4Yjk0OWUiLz4KPC9zdmc+",
+    "referenceVector": {
+      "jawOpen": 0.3,
+      "smile": 0.25,
+      "browRaise": 0.2,
+      "eyeOpenLeft": 0.6,
+      "eyeOpenRight": 0.6,
+      "tongueOut": 0,
+      "headTilt": 0,
+      "leftHandNearFace": 0.55,
+      "rightHandNearFace": 0.1,
+      "leftHandAboveHead": 1,
+      "rightHandAboveHead": 0,
+      "handsSpread": 0.65
+    },
+    "threshold": 0.48
+  }
 ];
