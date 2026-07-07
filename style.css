@@ -228,6 +228,15 @@ html, body {
 }
 .pose-status.ok { color: var(--accent); }
 
+.lib-toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.btn--sm { padding: 8px 10px; font-size: 11px; }
+.file-btn { position: relative; cursor: pointer; text-align: center; }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
