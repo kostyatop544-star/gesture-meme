@@ -220,4 +220,105 @@ export const SEED_MEMES = [
     },
     "threshold": 0.48
   }
+,
+  {
+    "id": "seed-eye-roll",
+    "name": "Eye Roll / Закатывание глаз",
+    "imageDataUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CiAgICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzExMTUxYiIvPgogICAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTA1IiByPSI3OCIgZmlsbD0iI2ZmZDM0ZCIgc3Ryb2tlPSIjMDAwMDAwMjIiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPGxpbmUgeDE9IjU3IiB5MT0iNjgiIHgyPSI4MyIgeTI9IjU5IiBzdHJva2U9IiMyYjJiMmIiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICA8ZWxsaXBzZSBjeD0iNzAiIGN5PSI5NSIgcng9IjEwIiByeT0iNC44IiBmaWxsPSIjMmIyYjJiIi8+CiAgICA8bGluZSB4MT0iMTE3IiB5MT0iNjgiIHgyPSIxNDMiIHkyPSI1OSIgc3Ryb2tlPSIjMmIyYjJiIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPGVsbGlwc2UgY3g9IjEzMCIgY3k9Ijk1IiByeD0iMTAiIHJ5PSI0LjgiIGZpbGw9IiMyYjJiMmIiLz4KICAgIDxwYXRoIGQ9Ik03NiAxMzggUTEwMCAxNDggMTI0IDEzOCIgc3Ryb2tlPSIjMmIyYjJiIiBzdHJva2Utd2lkdGg9IjYiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==",
+    "referenceVector": {
+      "jawOpen": 0.1,
+      "smile": 0.15,
+      "browRaise": 0.2,
+      "eyeOpenLeft": 0.3,
+      "eyeOpenRight": 0.85,
+      "tongueOut": 0,
+      "headTilt": 0.35,
+      "leftHandNearFace": 0,
+      "rightHandNearFace": 0,
+      "leftHandAboveHead": 0,
+      "rightHandAboveHead": 0,
+      "handsSpread": 0
+    },
+    "threshold": 0.42
+  },
+  {
+    "id": "seed-ok-hand",
+    "name": "OK Gesture / Круг пальцами",
+    "imageDataUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CiAgICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzExMTUxYiIvPgogICAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTA1IiByPSI3OCIgZmlsbD0iI2ZmZDM0ZCIgc3Ryb2tlPSIjMDAwMDAwMjIiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPGVsbGlwc2UgY3g9IjY1IiBjeT0iOTUiIHJ4PSI5IiByeT0iMTIiIGZpbGw9IiMyYjJiMmIiLz4KICAgIDxjaXJjbGUgY3g9IjEzMCIgY3k9Ijk1IiByPSI5IiByeT0iMTIiIGZpbGw9IiMyYjJiMmIiLz4KICAgIDxwYXRoIGQ9Ik02MCAxMjAgUTgwIDE0MCAxMjAgMTIwIiBzdHJva2U9IiMyYjJiMmIiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICA8Y2lyY2xlIGN4PSI5MCIgY3k9IjEyMCIgcj0iMTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmM2Q4MSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PC9zdmc+",
+    "referenceVector": {
+      "jawOpen": 0.15,
+      "smile": 0.6,
+      "browRaise": 0.1,
+      "eyeOpenLeft": 0.7,
+      "eyeOpenRight": 0.7,
+      "tongueOut": 0,
+      "headTilt": 0,
+      "leftHandNearFace": 0.9,
+      "rightHandNearFace": 0,
+      "leftHandAboveHead": 0,
+      "rightHandAboveHead": 0,
+      "handsSpread": 0.2
+    },
+    "threshold": 0.45
+  },
+  {
+    "id": "seed-pointing",
+    "name": "Pointing / Ты следующий",
+    "imageDataUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMTExNTFiIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwNSIgcj0iNzgiIGZpbGw9IiNmZmQzNGQiIHN0cm9rZT0iIzAwMDAwMDIyIiBzdHJva2Utd2lkdGg9IjIiLz4KCjxlbGxpcHNlIGN4PSI3MCIgY3k9Ijk1IiByeD0iMTAiIHJ5PSI3IiBmaWxsPSIjMmIyYjJiIi8+CjxlbGxpcHNlIGN4PSIxMzAiIGN5PSI5NSIgcng9IjEwIiByeT0iNyIgZmlsbD0iIzJiMmIyYiIvPgo8bGluZSB4MT0iNTUiIHkxPSI3OCIgeDI9IjgzIiB5Mj0iNzQiIHN0cm9rZT0iIzJiMmIyYiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjExNyIgeTE9Ijc0IiB4Mj0iMTQ1IiB5Mj0iNzgiIHN0cm9rZT0iIzJiMmIyYiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZD0iTTc4IDEzOCBRMTAwIDE0OCAxMjIgMTM4IiBzdHJva2U9IiMyYjJiMmIiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxyZWN0IHg9IjE1MCIgeT0iMTE4IiB3aWR0aD0iNDYiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iI2YyYzQ4ZCIgc3Ryb2tlPSIjMDAwMDAwMjIiIHN0cm9rZS13aWR0aD0iMiIvPgo8Y2lyY2xlIGN4PSIxOTYiIGN5PSIxMjgiIHI9IjExIiBmaWxsPSIjZjJjNDhkIiBzdHJva2U9IiMwMDAwMDAyMiIgc3Ryb2tlLXdpZHRoPSIyIi8+Cgo8L3N2Zz4=",
+    "referenceVector": {
+      "jawOpen": 0.2,
+      "smile": 0.3,
+      "browRaise": 0.4,
+      "eyeOpenLeft": 0.8,
+      "eyeOpenRight": 0.8,
+      "tongueOut": 0,
+      "headTilt": -0.1,
+      "leftHandNearFace": 0,
+      "rightHandNearFace": 0.85,
+      "leftHandAboveHead": 0,
+      "rightHandAboveHead": 0,
+      "handsSpread": 0
+    },
+    "threshold": 0.43
+  },
+  {
+    "id": "seed-gigachad",
+    "name": "Gigachad Pose",
+    "imageDataUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMTExNTFiIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwNSIgcj0iNzgiIGZpbGw9IiNmZmQzNGQiIHN0cm9rZT0iIzAwMDAwMDIyIiBzdHJva2Utd2lkdGg9IjIiLz4KCjxwYXRoIGQ9Ik0zNSAxMzAgUTEwMCAyMTAgMTY1IDEzMCBMMTY1IDEwNSBRMTAwIDE0NSAzNSAxMDUgWiIgZmlsbD0iI2U2YjM0NyIvPgo8bGluZSB4MT0iNTUiIHkxPSI4MCIgeDI9Ijg1IiB5Mj0iODAiIHN0cm9rZT0iIzJiMmIyYiIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjExNSIgeTE9IjgwIiB4Mj0iMTQ1IiB5Mj0iODAiIHN0cm9rZT0iIzJiMmIyYiIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHJlY3QgeD0iNjIiIHk9IjkyIiB3aWR0aD0iMjAiIGhlaWdodD0iNyIgcng9IjMiIGZpbGw9IiMyYjJiMmIiLz4KPHJlY3QgeD0iMTE4IiB5PSI5MiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjciIHJ4PSIzIiBmaWxsPSIjMmIyYjJiIi8+CjxsaW5lIHgxPSI5NCIgeTE9IjE0MCIgeDI9IjEwNiIgeTI9IjE0MCIgc3Ryb2tlPSIjMmIyYjJiIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSIxNTAiIGN5PSI3MCIgcj0iMjAiIGZpbGw9IiNmMmM0OGQiIHN0cm9rZT0iIzAwMDAwMDIyIiBzdHJva2Utd2lkdGg9IjIiLz4KCjwvc3ZnPg==",
+    "referenceVector": {
+      "jawOpen": 0.05,
+      "smile": 0.1,
+      "browRaise": 0.6,
+      "eyeOpenLeft": 0.95,
+      "eyeOpenRight": 0.95,
+      "tongueOut": 0,
+      "headTilt": 0,
+      "leftHandNearFace": 0,
+      "rightHandNearFace": 0.4,
+      "leftHandAboveHead": 0,
+      "rightHandAboveHead": 1,
+      "handsSpread": 0.3
+    },
+    "threshold": 0.47
+  },
+  {
+    "id": "seed-skull-emoji",
+    "name": "Skull / 💀 (умер от смеха)",
+    "imageDataUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMTExNTFiIi8+CjxwYXRoIGQ9Ik0xMDAgMzAgQzYwIDMwIDM4IDYwIDM4IDk4IEMzOCAxMjIgNDggMTMyIDUyIDE0OCBMNjQgMTQ4IEw2NCAxNjggTDg2IDE2OCBMODYgMTQ4IEwxMTQgMTQ4IEwxMTQgMTY4IEwxMzYgMTY4IEwxMzYgMTQ4IEwxNDggMTQ4IEMxNTIgMTMyIDE2MiAxMjIgMTYyIDk4IEMxNjIgNjAgMTQwIDMwIDEwMCAzMCBaIiBmaWxsPSIjZWVmMWY0IiBzdHJva2U9IiMwMDAwMDAyMiIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjcyIiBjeT0iOTgiIHI9IjE4IiBmaWxsPSIjMTExNTFiIi8+CjxjaXJjbGUgY3g9IjEyOCIgY3k9Ijk4IiByPSIxOCIgZmlsbD0iIzExMTUxYiIvPgo8cGF0aCBkPSJNOTIgMTE4IEwxMDAgMTMwIEwxMDggMTE4IFoiIGZpbGw9IiMxMTE1MWIiLz4KPHJlY3QgeD0iNjYiIHk9IjE0MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjE0IiBmaWxsPSIjMTExNTFiIi8+CjxyZWN0IHg9IjgyIiB5PSIxNDAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzExMTUxYiIvPgo8cmVjdCB4PSI5OCIgeT0iMTQwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTQiIGZpbGw9IiMxMTE1MWIiLz4KPHJlY3QgeD0iMTE0IiB5PSIxNDAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzExMTUxYiIvPgo8L3N2Zz4=",
+    "referenceVector": {
+      "jawOpen": 0.7,
+      "smile": 0.3,
+      "browRaise": 0.1,
+      "eyeOpenLeft": 0.1,
+      "eyeOpenRight": 0.1,
+      "tongueOut": 0,
+      "headTilt": 0.2,
+      "leftHandNearFace": 0,
+      "rightHandNearFace": 0,
+      "leftHandAboveHead": 0,
+      "rightHandAboveHead": 0,
+      "handsSpread": 0
+    },
+    "threshold": 0.4
+  }
 ];
